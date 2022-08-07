@@ -36,7 +36,11 @@ export default function WordCard(props) {
             }
         }
 
-        console.log(guess)
+        
+        console.log(`Attempt: ${state.attempt}`);
+        
+        console.log(`Guess: ${state.guess}`);
+        // console.log(guess)
     }
 
     
@@ -50,7 +54,10 @@ export default function WordCard(props) {
             {
                 state.chars.map((c, i) =>
                     <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)
+
             }
+
+            
         </div>
     );
 }
