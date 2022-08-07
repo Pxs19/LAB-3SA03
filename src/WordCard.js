@@ -31,6 +31,7 @@ export default function WordCard(props) {
                 setState({...state, completed: true});
             } else {
                 console.log("reset, next attempt");
+                
                 setState({...state, guess: '', attempt: state.attempt + 1});
             }
         }
