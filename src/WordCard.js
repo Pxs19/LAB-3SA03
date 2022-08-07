@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import _, { attempt } from "lodash";
 import CharacterCard from "./CharacterCard";
 
+import "./WordCard.css";
+
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase();
@@ -56,10 +58,14 @@ export default function WordCard(props) {
 
             }
 
+            <h1 className="setCenter">
+
+                Attempt: {state.attempt} &nbsp; Guess: {state.guess}
+            </h1>
+
             
 
-            Attempt: {state.attempt}
-            Guess: {state.guess}
+            
 
             
         </div>

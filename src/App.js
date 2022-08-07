@@ -10,16 +10,26 @@ function App() {
   return (
 
 
-      <div>
+    <div>
+
+      <body className='setContainer'>
 
         <h1>
           Logic Game
         </h1>
 
+        <h2>
+          <WordCard value={word} />
+        </h2>
+
+
+      </body>
+
+
+
   
-            <WordCard value={word} />
- 
-      </div>
+
+    </div>
 
 
   );
