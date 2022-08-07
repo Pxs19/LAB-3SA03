@@ -1,7 +1,8 @@
 // import React from 'react';
 // import CharacterCard from './CharacterCard';
 import './App.css';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import WordCard from './WordCard';
@@ -20,6 +21,7 @@ function App() {
 
         <h2>
           <WordCard value={word} />
+          <ToastContainer />
         </h2>
 
 

@@ -4,6 +4,9 @@ import CharacterCard from "./CharacterCard";
 
 import "./WordCard.css";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const prepareStateFromWord = (given_word) => {
     let word = given_word.toUpperCase();
@@ -31,10 +34,23 @@ export default function WordCard(props) {
             if(guess == state.word) {
                 console.log('yeah!');
                 setState({...state, completed: true});
+                toast.success('You win!');
+                <ToastContainer />
+
+
+                setTimeout(() => {
+                    // refreshpage
+                    window.location.reload();
+                } , 1000);
+
+                
+
+
             } else {
                 console.log("reset, next attempt");
                 
                 setState({...state, guess: '', attempt: state.attempt + 1});
+                toast.error("Wrong!");
             }
         }
 
